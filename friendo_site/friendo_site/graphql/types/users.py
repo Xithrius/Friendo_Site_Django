@@ -13,9 +13,9 @@ def generate_user_auth_token(user=None):
 
 @token_required
 def get_user(_, info, data):
-    if data["discord_id"]:
+    if data.get("discord_id", None):
         return User.objects.get(discord_id=data["discord_id"])
-    elif data["username"]:
+    elif data.get("username", None):
         return User.objects.get(username=data["username"])
     else:
         raise KeyError("discord_id or username invalid or both are missing")

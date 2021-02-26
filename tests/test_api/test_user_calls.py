@@ -15,3 +15,6 @@ class TestUserCalls:
         headers = {"Authorization": f"Bearer {INVALID_TOKEN}"}
         response = requests.post(url=API_URL, json=GET_USERS, headers=headers)
         assert response.status_code != 200
+
+    def test_user_mutation(self):
+        assert True
