@@ -19,7 +19,7 @@ class TestForms:
             command_executor=SELENIUM_DRIVER_URL,
             desired_capabilities=DesiredCapabilities.CHROME,
         )
-        self.driver.implicitly_wait(1)
+        self.driver.implicitly_wait(0.3)
         self.driver.get(ADMIN_TEST_URL)
 
     def teardown_method(self):

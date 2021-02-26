@@ -12,7 +12,7 @@ class TestButtons:
             command_executor=SELENIUM_DRIVER_URL,
             desired_capabilities=DesiredCapabilities.CHROME,
         )
-        self.driver.implicitly_wait(1)
+        self.driver.implicitly_wait(0.3)
         self.driver.get(LOCAL_TEST_URL)
         self.all_a_tags = self.driver.find_elements_by_tag_name("a")
 
